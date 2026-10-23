@@ -4,13 +4,13 @@ export default function Home() {
       <main className="flex flex-1 w-full flex-col items-center justify-between py-32 px-16 bg-[#0548ff]/11 dark:bg-[#0548ff]/11 sm:items-start">
         <div className="flex flex-col w-full items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="w-full text-center text-3xl font-bold leading-10 tracking-tight text-[#f0dede]">
-            TAMID Bet Class - Week 2
+            Home
           </h1>
 
           <div className="flex flex-col gap-2">
             <h2 className="text-2xl font-semibold tracking-tight">Bio:</h2>
             <p className="whitespace-pre-line text-lg leading-8 text-[#f0dede]">
-              {`Hi! I'm Abhinav Lenkala.
+              {`Hi! I'm Abhi Lenkala.
               I'm a first-year studying AI and Business.
               I'm from East Granby, CT.
               I have an older brother and a twin sister.`}
