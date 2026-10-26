@@ -1,7 +1,7 @@
 const projects = [
   {
     title: "Water Tracker",
-    description: "Describe what your water tracker does here.",
+    description: "Sends text messages to log water consumption and provide reminders to drink more water.",
     link: "https://github.com/26lenkalaa",
   },
   {
