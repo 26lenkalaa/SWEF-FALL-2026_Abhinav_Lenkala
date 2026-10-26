@@ -17,6 +17,9 @@ export default function Navbar() {
           <Link href="/contact" className="transition-colors hover:text-white">
             Contact
           </Link>
+          <Link href="/tottenham" className="transition-colors hover:text-white">
+  Tottenham
+</Link>
         </div>
       </div>
     </nav>
