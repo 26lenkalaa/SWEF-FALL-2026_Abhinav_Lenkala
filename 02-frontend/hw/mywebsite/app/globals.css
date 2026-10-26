@@ -5,20 +5,19 @@
   --foreground: #f0dede;
 }
 
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-times: "Times New Roman", Times, serif;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0e163e;
     --foreground: #f0dede;
   }
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-times: "Times New Roman", Times, serif;
-  --font-sans: var(--font-plex-sans);
 }
 
 body {

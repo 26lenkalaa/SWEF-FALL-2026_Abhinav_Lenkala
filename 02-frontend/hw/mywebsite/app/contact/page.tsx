@@ -12,28 +12,18 @@ export default function Contact() {
         </div>
 
         <a
-          href="mailto:your.email@northeastern.edu"
+          href="mailto:lenkala.al@northeastern.edu"
           className="text-lg text-[#f0dede] underline transition-colors hover:text-white"
         >
           lenkala.a@northeastern.edu
         </a>
 
         <div className="flex flex-row flex-wrap items-center justify-center gap-3 text-base text-[#f0dede]">
-          <a
-            href="https://www.linkedin.com/in/abhinav-lenkala/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline transition-colors hover:text-white"
-          >
+          <a href="https://www.linkedin.com/in/abhinav-lenkala/" target="_blank" rel="noopener noreferrer" className="underline transition-colors hover:text-white">
             LinkedIn
           </a>
           <span aria-hidden="true">·</span>
-          <a
-            href="https://github.com/26lenkalaa"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline transition-colors hover:text-white"
-          >
+          <a href="https://github.com/26lenkalaa" target="_blank" rel="noopener noreferrer" className="underline transition-colors hover:text-white">
             GitHub
           </a>
         </div>

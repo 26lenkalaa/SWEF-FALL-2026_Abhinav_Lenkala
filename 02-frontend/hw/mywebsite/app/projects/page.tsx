@@ -1,7 +1,7 @@
 const projects = [
   {
     title: "Water Tracker",
-    description: "Tracks water consumption throughout day through hourly messages",
+    description: "Describe what your water tracker does here.",
     link: "https://github.com/26lenkalaa",
   },
   {
@@ -20,6 +20,7 @@ export default function Projects() {
           <h1 className="text-4xl font-bold tracking-tight text-[#f0dede]">
             Projects
           </h1>
+          <p className="text-lg text-[#f0dede]/70">Things I&apos;ve built</p>
         </div>
 
         <div className="flex w-full flex-col gap-4">
