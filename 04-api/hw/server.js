@@ -17,7 +17,41 @@ app.get("/", (req, res) => {
 // TODO: POST /ask — see hw/README.md
 //   Read prompt; 400 if missing; fetch OpenAI; res.json({ reply: ... })
 app.post("/ask", async (req, res) => {
-  res.status(501).json({ error: "POST /ask not implemented yet" });
+app.post("/ask", async (req, res) => {
+  const { prompt } = req.body;
+
+  if (!prompt) {
+    return res.status(400).json({ error: "prompt is required" });
+  }
+  try {
+    const openaiRes = await fetch(
+      "https://api.openai.com/v1/chat/completions",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "gpt-4o-mini",
+          messages: [{ role: "user", content: prompt }],
+        }),
+      }
+    );
+
+    const data = await openaiRes.json();
+
+    if (!openaiRes.ok) {
+      return res.status(openaiRes.status).json({
+        error: "OpenAI request failed",
+      });
+    }
+
+    res.json({ reply: data.choices[0].message.content });
+  } catch (error) {
+    res.status(500).json({ error: "Unable to get a reply" });
+  }
+});
 });
 
 app.listen(PORT, () => {
