@@ -8,7 +8,7 @@ def length_of_longest_substring(s):
     start = 0
     max_length = 0
 
-    for end, character in enumerate(text):
+    for end, character in enumerate(s):
         if character in last_position and last_position[character] >= start:
             start = last_position[character] + 1
 
