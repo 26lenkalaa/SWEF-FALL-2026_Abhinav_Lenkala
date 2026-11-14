@@ -14,9 +14,7 @@ app.get("/", (req, res) => {
   res.json({ ok: true, try: "POST /ask with { prompt: \"...\" }" });
 });
 
-// TODO: POST /ask — see hw/README.md
-//   Read prompt; 400 if missing; fetch OpenAI; res.json({ reply: ... })
-app.post("/ask", async (req, res) => {
+// POST /ask: { prompt } -> OpenAI Chat Completions -> { reply }
 app.post("/ask", async (req, res) => {
   const { prompt } = req.body;
 
@@ -51,7 +49,6 @@ app.post("/ask", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Unable to get a reply" });
   }
-});
 });
 
 app.listen(PORT, () => {
