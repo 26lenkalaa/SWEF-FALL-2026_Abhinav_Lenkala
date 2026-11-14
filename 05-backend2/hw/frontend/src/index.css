@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+/* Layout: left-aligned single column (max ~40rem), text-first, photo beside the intro on wide screens. */
+@theme {
+  --color-ink: #0e163e;       /* page background (Spurs navy) */
+  --color-ink-raised: #151f4f; /* inputs, quiet panels */
+  --color-line: #2a3566;      /* borders and dividers */
+  --color-paper: #f0dede;     /* main text */
+  --color-muted: #b7afc0;     /* secondary text, a pink-leaning grey */
+  --color-error: #f3a6a6;
+
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-paper);
+  outline-offset: 2px;
+}
